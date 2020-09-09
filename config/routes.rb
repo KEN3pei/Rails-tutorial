@@ -15,14 +15,14 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   
-  resources :users, only: [:index, :show]
+  resources :users, only: [:index, :show, :edit, :update, :destroy]
   # get '/users', to:'users#index'
   # get '/users/1', to:'users#show'
-  
-  # post '/users', to:'users#create'
-  # get '/users/new', to:'users#new'
   # get '/users/1/edit', to:'users#edit'
   # patch '/users/1', to:' users#update'
   # delete '/users/1', to:' users#destroy'
+  
+  # get '/users/new', to:'users#new'
+  # post '/users', to:'users#create'
 
 end
